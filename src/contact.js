@@ -1,0 +1,1 @@
+export const contact = 'hello from the contact page';

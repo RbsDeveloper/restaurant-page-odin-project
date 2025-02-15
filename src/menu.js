@@ -1,0 +1,1 @@
+export const menu = 'hello from the menu page';

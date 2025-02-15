@@ -1,0 +1,1 @@
+export const about = 'hello from the about page';

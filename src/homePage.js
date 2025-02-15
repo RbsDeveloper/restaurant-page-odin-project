@@ -1,0 +1,1 @@
+export const hp = 'this is from the home page';
