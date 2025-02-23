@@ -1,3 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
 body {
-    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #FFDD95, #FFAB40);
+    height: 100vh;
+}
+
+header {
+  width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 248, 225, 1) 0%, rgba(255, 248, 225, 0) 100%);
+    color: #3E2723;
+    padding: 10px 60px;
+}
+
+header .logo {
+    font-family: "Pacifico", serif;
+    font-size: 28px;
+    margin-right: 100px;
+}
+
+nav {
+    font-family: "Quicksand", serif;
+}
+
+nav button {
+  color: #3E2723;
+  background-color: transparent;
+  border: none;
+  margin: 0 25px;
+  font-size: 20px;
+  font-weight: 400;
+  transition: color 400ms ease, font-weight 400ms ease;
+}
+
+nav button:hover {
+  color: #FFA726;
+  font-weight: 700;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+main {
+    width: 70%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-family: "Pacifico", serif;
+    width: 50%;
+    
+}
+
+.text h1 {
+    font-size: 64px;
+    color: #3E2723;
+    margin-bottom: 30px;
+}
+
+.text h2 {
+  font-family: "Quicksand", serif;
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+.png {
+  width: 50%;
+}
+
+.btn-section {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-section button {
+  font-family: "Quicksand", serif;
+  background-color: #66BB6A;
+  color: #FFF8E1;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  transition: background-color 400ms ease, transform 400ms ease;
+}
+
+.btn-section button:hover {
+  background-color: #4CAF50;
+  transform: scale(0.98);
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-family: "Pacifico", serif;
+  padding-bottom: 10px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.productContainer { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.smothieImgContainer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smothieInfo {
+ width: 60%;
+ height: 100%;
+ text-align: start;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.smothieInfo h3 {
+  font-family: "Pacifico";
+}
+
+.ingredients {
+  font-family: 'Quicksand', serif;
+}
+
+.price {
+  font-family: "Pacifico", serif;
+  font-size: 28px;
+  background-color: #4CAF50;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.active {
+  color: #66BB6A;
+  font-weight: 700;
+}
+
+.contactWrapper {
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.infoSection {
+  width: 40%;
+  color: #3E2723;
+  background-color: #66BB6A;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.infoSection h3 {
+  font-family: "Pacifico", serif;
+}
+
+.infoSection p {
+  font-family: 'Quicksand', serif;
+}
+
+.formSide {
+  width: 60%;
+  background: rgba(62, 39, 35, 0.65);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.5px);
+-webkit-backdrop-filter: blur(6.5px);
+border: 1px solid rgba(62, 39, 35, 0.3)
+}
+
+.conForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.conForm label {
+  font-family: "Pacifico";
+  margin-bottom: 7px;
+}
+
+.conForm input, textarea {
+  font-family: "Quicksand", serif;
+  padding: 7px;
+  margin-bottom: 16px;
+  border-radius: 7px;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  color: #FFAB40;
+}
+
+textarea {
+  margin-bottom: 0;
+}
+
+.fa-brands {
+  font-size: 25px;
+  margin-right: 10px;
 }
